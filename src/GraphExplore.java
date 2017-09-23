@@ -26,6 +26,7 @@ public class GraphExplore implements ViewerListener{
 	protected Graph graph;
 	
     public static void main(String args[]) {
+    	System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer");
         new GraphExplore();
     }
 
@@ -36,7 +37,7 @@ public class GraphExplore implements ViewerListener{
 	    graph.setAutoCreate(true);
 	    graph.setStrict(false);
 	    
-	    Viewer viewer = graph.display();
+	    Viewer viewer = graph.display(false);
 	    viewer.getDefaultView().setMouseManager(new MouseClick());
 	    
 	    // Quit program when view is closed
@@ -47,10 +48,6 @@ public class GraphExplore implements ViewerListener{
         fromViewer.addSink(graph);
 	
 	    graph.addEdge("CityAston", "City", "Aston");
-	    
-//	    Node city = graph.getNode("City");
-//	    city.setAttribute("name", "City");
-	    
 	    graph.addEdge("AstonSmallheath", "Aston", "Smallheath");
 	    graph.addEdge("SmallheathCity", "Smallheath", "City");
 	    graph.addEdge("CityFiveways", "City", "Fiveways");
@@ -145,6 +142,7 @@ public class GraphExplore implements ViewerListener{
 	    "node {" +
 	    "	fill-color: black;" +
 	    "	text-size: 24;"+
+	    "   text-alignment: at-right;" +
 	    "}" +
 //		    "node.marked {" +
 //			"	fill-color: red;" +
