@@ -46,42 +46,33 @@
             graph.addEdge("RedditchSelloak", "Redditch", "Sellyoak");
 
             
-            //DEFINE POSITIONS
-            
+            //DEFINE NODES
             Node city = graph.getNode("City");
-            city.setAttribute("xy", 0,0);
-               
-            Node aston = graph.getNode("Aston");
-            aston.setAttribute("xy", 1, 1);
-            
-            Node fiveways = graph.getNode("Fiveways");
-            fiveways.setAttribute("xy", -1, -1);
-            
-            Node smallheath = graph.getNode("Smallheath");
-            smallheath.setAttribute("xy", 1, -1);
-            
-            Node acocksgreen = graph.getNode("Acocksgreen");
-            acocksgreen.setAttribute("xy", 2, -2);
-            
+            Node aston = graph.getNode("Aston");           
+            Node fiveways = graph.getNode("Fiveways");            
+            Node smallheath = graph.getNode("Smallheath");           
+            Node acocksgreen = graph.getNode("Acocksgreen");           
             Node solihull = graph.getNode("Solihull");
-            solihull.setAttribute("xy", 3, -3);
-
             Node sellyoak = graph.getNode("Sellyoak");
-            sellyoak.setAttribute("xy", -2, -2);
-
             Node redditch = graph.getNode("Redditch");
-            redditch.setAttribute("xy", -3, -3);
-
             Node erdington = graph.getNode("Erdington");
-            erdington.setAttribute("xy", 2, 2);
-            
             Node lichfield = graph.getNode("Lichfield");
-            lichfield.setAttribute("xy", 3, 3);           
-  
             Node perrybarr = graph.getNode("Perrybarr");
-            perrybarr.setAttribute("xy", -2, 2);               
-            
             Node walsall = graph.getNode("Walsall");
+            
+            
+            //DEFINE LOCATIONS
+            city.setAttribute("xy", 0,0);
+            aston.setAttribute("xy", 1, 1);
+            fiveways.setAttribute("xy", -1, -1);
+            smallheath.setAttribute("xy", 1, -1);
+            acocksgreen.setAttribute("xy", 2, -2);
+            solihull.setAttribute("xy", 3, -3);
+            sellyoak.setAttribute("xy", -2, -2);
+            redditch.setAttribute("xy", -3, -3);
+            erdington.setAttribute("xy", 2, 2);
+            lichfield.setAttribute("xy", 3, 3);           
+            perrybarr.setAttribute("xy", -2, 2);               
             walsall.setAttribute("xy", -3, 3);               
             
             
