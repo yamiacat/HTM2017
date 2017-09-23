@@ -68,6 +68,36 @@ public class GraphExplore implements ViewerListener{
 	    graph.addEdge("AcocksgreenSelloak", "Acocksgreen", "Sellyoak");
 	    graph.addEdge("RedditchSelloak", "Redditch", "Sellyoak");
 	        
+        //DEFINE NODES
+        Node city = graph.getNode("City");
+        Node aston = graph.getNode("Aston");           
+        Node fiveways = graph.getNode("Fiveways");            
+        Node smallheath = graph.getNode("Smallheath");           
+        Node acocksgreen = graph.getNode("Acocksgreen");           
+        Node solihull = graph.getNode("Solihull");
+        Node sellyoak = graph.getNode("Sellyoak");
+        Node redditch = graph.getNode("Redditch");
+        Node erdington = graph.getNode("Erdington");
+        Node lichfield = graph.getNode("Lichfield");
+        Node perrybarr = graph.getNode("Perrybarr");
+        Node walsall = graph.getNode("Walsall");
+        
+        
+        //DEFINE LOCATIONS
+        city.setAttribute("xy", 0,0);
+        aston.setAttribute("xy", 1, 1);
+        fiveways.setAttribute("xy", -1, -1);
+        smallheath.setAttribute("xy", 1, -1);
+        acocksgreen.setAttribute("xy", 2, -2);
+        solihull.setAttribute("xy", 3, -3);
+        sellyoak.setAttribute("xy", -2, -2);
+        redditch.setAttribute("xy", -3, -3);
+        erdington.setAttribute("xy", 2, 2);
+        lichfield.setAttribute("xy", 3, 3);           
+        perrybarr.setAttribute("xy", -2, 2);               
+        walsall.setAttribute("xy", -3, 3);               
+
+       
 	    for (Node node : graph) {
 	        node.addAttribute("ui.label", node.getId());
 	    }
